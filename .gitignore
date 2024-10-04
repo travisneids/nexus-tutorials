@@ -1,0 +1,17 @@
+.vscode
+**/node_modules
+**/coverage
+**/.next
+**/dist
+**/.DS_Store
+**/.env
+**/.npmrc
+**/.vercel
+**/report.*.json
+.vercel
+nexus-ui/public/sitemap.xml
+nexus-ui/public/sitemap-*.xml
+
+# ide
+.idea/
+.fleet
