@@ -3,11 +3,19 @@ const bodyParser = require("body-parser");
 const helmet = require("helmet");
 const cors = require("cors");
 const rateLimit = require("express-rate-limit");
+const NexusGG = require("nexus-node-sdk");
 const dotenv = require("dotenv");
 dotenv.config();
 
 const authRoutes = require("./routes/auth");
 const creatorProgramRoutes = require("./routes/creatorProgram");
+
+// Nexus configuration
+NexusGG.config(
+  process.env.NEXUS_PUBLIC_KEY,
+  process.env.NEXUS_PRIVATE_KEY,
+  "sandbox"
+);
 
 const app = express();
 app.use(helmet()); // Secure HTTP headers
